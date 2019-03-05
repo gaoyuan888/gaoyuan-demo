@@ -14,6 +14,10 @@ public class MyStack {
         elements = new int[0];
     }
 
+    public boolean isEmpty() {
+        return elements.length == 0;
+    }
+
     //弹出栈顶元素
     public int pop() {
         boolean b = elements.length > 0;

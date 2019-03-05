@@ -14,6 +14,12 @@ public class MyQuene {
         elements = new int[0];
     }
 
+    //判断是否为空
+    public boolean isEmpty() {
+        return elements.length == 0;
+    }
+
+
     //入队
     public void add(int element) {
         int[] newArray = new int[elements.length + 1];

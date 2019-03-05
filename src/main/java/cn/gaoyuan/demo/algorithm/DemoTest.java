@@ -22,7 +22,9 @@ public class DemoTest {
 
         System.out.println(quene.poll());
         System.out.println(quene.poll());
+        System.out.println(quene.poll());
 
+        System.out.println(quene.isEmpty());
 
     }
 
