@@ -14,6 +14,19 @@ import java.util.Arrays;
 public class DemoTest {
 
     @Test
+    public void mystacj() {
+        MyStack stack = new MyStack();
+        stack.push(1);
+        stack.push(2);
+        int peek = stack.peek();
+        System.out.println(peek);
+        int pop = stack.pop();
+        System.out.println(pop);
+        int pop1 = stack.pop();
+        System.out.println(pop1);
+    }
+
+    @Test
     public void array() {
         int[] a = new int[]{1, 2, 3};
 
