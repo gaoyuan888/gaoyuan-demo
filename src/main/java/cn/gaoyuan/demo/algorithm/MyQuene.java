@@ -1,7 +1,7 @@
 package cn.gaoyuan.demo.algorithm;
 
 /**
- * 功能描述:
+ * 功能描述:队列
  *
  * @author yaoyizhou
  * @date 2019/3/5 21:13

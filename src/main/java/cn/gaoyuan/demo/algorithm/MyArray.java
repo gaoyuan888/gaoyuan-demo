@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.Arrays;
 
 /**
- * 功能描述:
+ * 功能描述: 数组
  *
  * @author yaoyizhou
  * @date 2019/3/4 12:57
