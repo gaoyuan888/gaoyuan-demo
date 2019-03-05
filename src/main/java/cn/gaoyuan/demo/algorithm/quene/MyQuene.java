@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.algorithm;
+package cn.gaoyuan.demo.algorithm.quene;
 
 /**
  * 功能描述:队列

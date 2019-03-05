@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.algorithm;
+package cn.gaoyuan.demo.algorithm.array;
 
 import org.junit.Test;
 
