@@ -1,7 +1,5 @@
 package cn.gaoyuan.demo.algorithm.array;
 
-import cn.gaoyuan.demo.algorithm.quene.MyQuene;
-import cn.gaoyuan.demo.algorithm.stack.MyStack;
 import org.junit.Test;
 
 import java.util.Arrays;

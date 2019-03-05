@@ -1,9 +1,6 @@
 package cn.gaoyuan.demo.algorithm.stack;
 
-import cn.gaoyuan.demo.algorithm.quene.MyQuene;
 import org.junit.Test;
-
-import java.util.Arrays;
 
 /**
  * 功能描述:
