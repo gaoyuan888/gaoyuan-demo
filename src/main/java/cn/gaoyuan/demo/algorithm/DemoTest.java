@@ -11,7 +11,7 @@ import java.util.Arrays;
  * @date 2019/3/4 10:38
  * @desc
  */
-public class Line {
+public class DemoTest {
 
     @Test
     public void array() {
