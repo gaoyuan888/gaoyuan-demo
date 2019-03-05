@@ -11,7 +11,7 @@ public class MyStack {
     int[] elements;
 
     public MyStack() {
-        elements = new int[1];
+        elements = new int[0];
     }
 
     //弹出栈顶元素

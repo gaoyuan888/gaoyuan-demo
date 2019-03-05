@@ -14,7 +14,20 @@ import java.util.Arrays;
 public class DemoTest {
 
     @Test
-    public void mystacj() {
+    public void myQuene() {
+        MyQuene quene = new MyQuene();
+        quene.add(3);
+        quene.add(4);
+        quene.add(5);
+
+        System.out.println(quene.poll());
+        System.out.println(quene.poll());
+
+
+    }
+
+    @Test
+    public void mystack() {
         MyStack stack = new MyStack();
         stack.push(1);
         stack.push(2);
