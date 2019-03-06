@@ -28,9 +28,9 @@ public class Node {
      * @param node
      */
     public void after(Node node) {
-        Node currentNode = this.next;
+        Node nextNext = this.next;
         this.next = node;
-        node.next = currentNode;
+        node.next = nextNext;
     }
 
     /**
