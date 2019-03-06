@@ -22,7 +22,9 @@ public class Node {
         this.value = value;
     }
 
-    //打印所有节点信息
+    /**
+     * 打印所有节点信息
+     */
     public void show() {
         Node currentNode = this;
         while (true) {
