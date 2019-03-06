@@ -17,7 +17,10 @@ public class NodeTest {
         Node node2 = new Node(2);
         Node node3 = new Node(3);
         Node append = node.append(node2).append(node3);
-        System.out.println(append.next().getValue());
+        append.show();
+        node.removeNext();
+        append.show();
+
 
     }
 

@@ -22,6 +22,26 @@ public class Node {
         this.value = value;
     }
 
+    //打印所有节点信息
+    public void show() {
+        Node currentNode = this;
+        while (true) {
+            System.out.println(currentNode.value);
+            currentNode = currentNode.next;
+            if (currentNode == null) {
+                break;
+            }
+        }
+    }
+
+    /**
+     * 刪除下一节点**
+     */
+    public void removeNext() {
+        Node newNext = next.next;
+        this.next = newNext;
+    }
+
     /**
      * 获取当前节点下一个节点
      *
