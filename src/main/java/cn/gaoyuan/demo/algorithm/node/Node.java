@@ -23,6 +23,17 @@ public class Node {
     }
 
     /**
+     * 插入一个节点作为当前节点的下一个节点
+     *
+     * @param node
+     */
+    public void after(Node node) {
+        Node currentNode = this.next;
+        this.next = node;
+        node.next = currentNode;
+    }
+
+    /**
      * 打印所有节点信息
      */
     public void show() {

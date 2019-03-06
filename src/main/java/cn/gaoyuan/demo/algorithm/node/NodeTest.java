@@ -17,10 +17,12 @@ public class NodeTest {
         Node node2 = new Node(2);
         Node node3 = new Node(3);
         Node append = node.append(node2).append(node3);
-        append.show();
-        node.removeNext();
-        append.show();
-
+//        append.show();
+//        node.removeNext();
+//        append.show();
+        Node node4 = new Node(4);
+        node2.after(node4);
+        node.show();
 
     }
 
