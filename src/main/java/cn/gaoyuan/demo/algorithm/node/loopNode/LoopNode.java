@@ -1,7 +1,7 @@
 package cn.gaoyuan.demo.algorithm.node.loopNode;
 
 /**
- * 功能描述:链表
+ * 功能描述:循环链表
  *
  * @author yaoyizhou
  * @date 2019/3/5 21:32
