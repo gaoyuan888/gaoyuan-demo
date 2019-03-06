@@ -18,8 +18,24 @@ public class Node {
         this.value = value;
     }
 
+    public Node next() {
+        return this.next;
+    }
+
     //    为节点追加节点
-    public void append(Node node) {
-        this.next = node;
+    public Node append(Node node) {
+        Node current = this;
+        while (true) {
+            if (current.next == null) {
+                break;
+            }
+            current = current.next;
+        }
+        current.next = node;
+        return this;
+    }
+
+    public int getValue() {
+        return this.value;
     }
 }
