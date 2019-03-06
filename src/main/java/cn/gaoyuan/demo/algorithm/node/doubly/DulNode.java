@@ -31,10 +31,10 @@ public class DulNode {
      */
     public void after(DulNode node) {
         DulNode nextNext = this.next;
-
+        //建立当前节点与前置节点产生联系
         this.next = node;
         node.pre = this;
-
+        //建立当前节点与后置节点产生联系
         nextNext.pre = node;
         node.next = nextNext;
     }
