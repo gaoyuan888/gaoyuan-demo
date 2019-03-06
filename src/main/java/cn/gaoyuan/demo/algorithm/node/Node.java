@@ -9,20 +9,34 @@ package cn.gaoyuan.demo.algorithm.node;
  */
 public class Node {
 
-    //值
+    /**
+     * 值
+     */
     int value;
-    //下一个节点
+    /**
+     * 下一个节点
+     */
     Node next;
 
     public Node(int value) {
         this.value = value;
     }
 
+    /**
+     * 获取当前节点下一个节点
+     *
+     * @return
+     */
     public Node next() {
         return this.next;
     }
 
-    //    为节点追加节点
+    /**
+     * 为节点追加节点
+     *
+     * @param node
+     * @return
+     */
     public Node append(Node node) {
         Node current = this;
         while (true) {
@@ -35,6 +49,11 @@ public class Node {
         return this;
     }
 
+    /**
+     * 获取当前节点的值
+     *
+     * @return
+     */
     public int getValue() {
         return this.value;
     }
