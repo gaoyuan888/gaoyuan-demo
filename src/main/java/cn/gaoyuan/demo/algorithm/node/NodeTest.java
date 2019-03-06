@@ -3,7 +3,7 @@ package cn.gaoyuan.demo.algorithm.node;
 import org.junit.Test;
 
 /**
- * 功能描述:
+ * 功能描述:链表相关操作测试
  *
  * @author yaoyizhou
  * @date 2019/3/4 10:38
