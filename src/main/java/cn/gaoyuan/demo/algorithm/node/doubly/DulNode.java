@@ -48,4 +48,9 @@ public class DulNode {
     public DulNode pre() {
         return this.pre;
     }
+
+    //获取数据
+    public int getData() {
+        return this.data;
+    }
 }
