@@ -39,5 +39,13 @@ public class DulNode {
         node.next = nextNext;
     }
 
-//    public DulNode
+    //下一个节点
+    public DulNode next() {
+        return this.next;
+    }
+
+    //上一个节点
+    public DulNode pre() {
+        return this.pre;
+    }
 }
