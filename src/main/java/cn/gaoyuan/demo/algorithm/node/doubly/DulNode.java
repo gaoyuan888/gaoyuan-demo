@@ -38,4 +38,6 @@ public class DulNode {
         nextNext.pre = node;
         node.next = nextNext;
     }
+
+//    public DulNode
 }
