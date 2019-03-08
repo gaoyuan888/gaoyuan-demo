@@ -19,6 +19,10 @@ public class Recursive {
         binarySearch(0, a.length, 3, a);
     }
 
+    /**
+     * 简单示例
+     * @param i
+     */
     public static void print(int i) {
         if (i <= 0) {
             return;
