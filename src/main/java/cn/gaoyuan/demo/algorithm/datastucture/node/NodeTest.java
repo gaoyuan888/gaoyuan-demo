@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.algorithm.node;
+package cn.gaoyuan.demo.algorithm.datastucture.node;
 
 import org.junit.Test;
 

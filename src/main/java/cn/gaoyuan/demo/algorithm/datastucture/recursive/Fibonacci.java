@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.algorithm.recursive;
+package cn.gaoyuan.demo.algorithm.datastucture.recursive;
 
 import org.junit.Test;
 

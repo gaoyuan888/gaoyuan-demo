@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.algorithm.node.doubly;
+package cn.gaoyuan.demo.algorithm.datastucture.node.doubly;
 
 /**
  * 功能描述:双向链表

@@ -1,24 +1,24 @@
-package cn.gaoyuan.demo.algorithm.node;
+package cn.gaoyuan.demo.algorithm.datastucture.node.loopNode;
 
 /**
- * 功能描述:链表
+ * 功能描述:循环链表
  *
  * @author yaoyizhou
  * @date 2019/3/5 21:32
  * @desc
  */
-public class Node {
+public class LoopNode {
 
     /**
      * 值
      */
     int value;
     /**
-     * 下一个节点
+     * 下一个节点,就是自己
      */
-    Node next;
+    LoopNode next = this;
 
-    public Node(int value) {
+    public LoopNode(int value) {
         this.value = value;
     }
 
@@ -27,8 +27,8 @@ public class Node {
      *
      * @param node
      */
-    public void after(Node node) {
-        Node nextNext = this.next;
+    public void after(LoopNode node) {
+        LoopNode nextNext = this.next;
         this.next = node;
         node.next = nextNext;
     }
@@ -37,7 +37,7 @@ public class Node {
      * 打印所有节点信息
      */
     public void show() {
-        Node currentNode = this;
+        LoopNode currentNode = this;
         while (true) {
             System.out.println(currentNode.value);
             currentNode = currentNode.next;
@@ -51,7 +51,7 @@ public class Node {
      * 刪除下一节点**
      */
     public void removeNext() {
-        Node newNext = next.next;
+        LoopNode newNext = next.next;
         this.next = newNext;
     }
 
@@ -60,27 +60,27 @@ public class Node {
      *
      * @return
      */
-    public Node next() {
+    public LoopNode next() {
         return this.next;
     }
 
     /**
-     * 为节点追加节点
+     * 为节点追加节点*** 循环链表没有这个方法
      *
      * @param node
      * @return
      */
-    public Node append(Node node) {
-        Node current = this;
-        while (true) {
-            if (current.next == null) {
-                break;
-            }
-            current = current.next;
-        }
-        current.next = node;
-        return this;
-    }
+//    public LoopNode append(LoopNode node) {
+//        LoopNode current = this;
+//        while (true) {
+//            if (current.next == null) {
+//                break;
+//            }
+//            current = current.next;
+//        }
+//        current.next = node;
+//        return this;
+//    }
 
     /**
      * 获取当前节点的值

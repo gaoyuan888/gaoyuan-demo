@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.algorithm.node.doubly;
+package cn.gaoyuan.demo.algorithm.datastucture.node.doubly;
 
 import org.junit.Test;
 

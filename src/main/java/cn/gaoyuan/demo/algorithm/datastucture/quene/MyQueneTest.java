@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.algorithm.quene;
+package cn.gaoyuan.demo.algorithm.datastucture.quene;
 
 import org.junit.Test;
 

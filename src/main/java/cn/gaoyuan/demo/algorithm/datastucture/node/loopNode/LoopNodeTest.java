@@ -1,6 +1,5 @@
-package cn.gaoyuan.demo.algorithm.node.loopNode;
+package cn.gaoyuan.demo.algorithm.datastucture.node.loopNode;
 
-import cn.gaoyuan.demo.algorithm.node.Node;
 import org.junit.Test;
 
 /**
