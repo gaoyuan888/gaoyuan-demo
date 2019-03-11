@@ -1,9 +1,20 @@
 package cn.gaoyuan.demo.algorithm.sort;
 
+import org.junit.Test;
+
+import java.util.Arrays;
+
 /**
  * 选择排序
  */
 public class SelectSort {
+
+    @Test
+    public void test(){
+        int[]arr=new int[]{1,2,8,4,5,6,4,3,2};
+        selectSort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
 
     public void selectSort(int[] arr){
         for(int i=0;i<arr.length;i++){
