@@ -15,18 +15,27 @@ public class MergeSort {
 
     @Test
     public void test() {
-        int[] arr = new int[]{1, 4, 2, 5, 6, 2, 6, 2, 4};
+        int[] arr = new int[]{1, 9, 2, 5, 6, 2, 6, 2, 4};
         System.out.println(Arrays.toString(arr));
+        mergeSort(arr, 0, 8);
+//        merge(arr, 0, 2, 8);
+        System.out.println(Arrays.toString(arr));
+    }
 
-        merge(arr, 0, 4, 8);
-        System.out.println(Arrays.toString(arr));
+    public void mergeSort(int[] arr, int start, int end) {
+        int middle = (end + start) / 2;
+        if (start < end) {
+            mergeSort(arr, start, middle);
+            mergeSort(arr, middle + 1, end);
+            merge(arr, start, middle, end);
+        }
     }
 
     public void merge(int[] arr, int start, int middle, int end) {
         int[] tmp = new int[end - start + 1];
         int index = 0;
         int low = start;
-        int height = middle;
+        int height = middle + 1;
         while (low <= middle && height <= end) {
             if (arr[low] <= arr[height]) {
                 tmp[index++] = arr[low++];
