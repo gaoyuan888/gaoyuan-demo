@@ -45,11 +45,11 @@ public class RadixSort {
             }
             //将临时数组中的值，拷贝到原数组
             int index = 0;
-            for (int m = 0; m < count[index]; m++) {
-                arr[index] = tmpArr[index][m];
-                index++;
+            for (int k = 0; k < 10; k++) {
+                for (int m = 0; m < count[k]; m++) {
+                    arr[index++] = tmpArr[k][m];
+                }
             }
-
         }
     }
 }
