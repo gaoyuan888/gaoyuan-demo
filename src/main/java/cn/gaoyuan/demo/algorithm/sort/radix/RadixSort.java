@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.algorithm.sort;
+package cn.gaoyuan.demo.algorithm.sort.radix;
 
 import org.junit.Test;
 
