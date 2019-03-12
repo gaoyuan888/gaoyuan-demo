@@ -15,7 +15,7 @@ public class RadixSort {
 
     @Test
     public void test() {
-        int[] arr = new int[]{1, 3654, 15, 3232, 4, 6, 234, 3, 5321, 6, 3};
+        int[] arr = new int[]{12, 3654, 13335, 3232, 42, 6, 234, 3, 5321, 6, 3};
         System.out.println(Arrays.toString(arr));
         redixSort(arr);
         System.out.println(Arrays.toString(arr));
