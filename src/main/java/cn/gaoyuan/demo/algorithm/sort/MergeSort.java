@@ -18,11 +18,11 @@ public class MergeSort {
         int[] arr = new int[]{1, 4, 2, 5, 6, 2, 6, 2, 4};
         System.out.println(Arrays.toString(arr));
 
-        mergeSort(arr, 0, 4, 8);
+        merge(arr, 0, 4, 8);
         System.out.println(Arrays.toString(arr));
     }
 
-    public void mergeSort(int[] arr, int start, int middle, int end) {
+    public void merge(int[] arr, int start, int middle, int end) {
         int[] tmp = new int[end - start + 1];
         int index = 0;
         int low = start;
