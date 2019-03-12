@@ -18,7 +18,6 @@ public class MergeSort {
         int[] arr = new int[]{1, 9, 2, 5, 6, 2, 6, 2, 4};
         System.out.println(Arrays.toString(arr));
         mergeSort(arr, 0, 8);
-//        merge(arr, 0, 2, 8);
         System.out.println(Arrays.toString(arr));
     }
 
