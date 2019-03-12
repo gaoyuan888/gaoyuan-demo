@@ -3,7 +3,7 @@ package cn.gaoyuan.demo.algorithm.datastucture.recursive;
 import org.junit.Test;
 
 /**
- * 斐波那契数列
+ * 递归-斐波那契数列
  */
 
 public class Fibonacci {

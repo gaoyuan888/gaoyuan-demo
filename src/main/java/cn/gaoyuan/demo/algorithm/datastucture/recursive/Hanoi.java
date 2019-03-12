@@ -3,7 +3,7 @@ package cn.gaoyuan.demo.algorithm.datastucture.recursive;
 import org.junit.Test;
 
 /**
- * 汉诺塔问题
+ * 递归-汉诺塔问题
  */
 public class Hanoi {
 
