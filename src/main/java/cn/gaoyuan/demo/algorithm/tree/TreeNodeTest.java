@@ -43,7 +43,7 @@ public class TreeNodeTest {
         System.out.println("*******前序查找******");
 
         //前序查找
-        TreeNode node = binaryTree.frontSearch(4);
+        TreeNode node = binaryTree.frontSearch(3);
         System.out.println(node.toString());
 
     }
