@@ -87,7 +87,7 @@ public class TreeNode {
     }
 
     /**
-     * 前序查找
+     * 前序查找(中序遍历和后续遍历一样)
      *
      * @param i
      * @return
