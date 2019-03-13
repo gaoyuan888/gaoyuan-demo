@@ -2,8 +2,6 @@ package cn.gaoyuan.demo.algorithm.tree;
 
 import org.junit.Test;
 
-import java.math.BigDecimal;
-
 /**
  * 功能描述:
  *
@@ -17,6 +15,10 @@ public class TreeNodeTest {
     public void test() {
         BinaryTree binaryTree = new BinaryTree();
         TreeNode node = new TreeNode(1);
+        TreeNode left = new TreeNode(2);
+        TreeNode right = new TreeNode(3);
+        node.setLeft(left);
+        node.setRight(right);
         binaryTree.setRoot(node);
     }
 }
