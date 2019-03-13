@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.Arrays;
 
 /**
- * 功能描述:基数排序
+ * 功能描述:基数排序-利用队列存储中间数组
  *
  * @author yaoyizhou
  * @date 2019/3/12 13:29
