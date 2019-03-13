@@ -41,6 +41,48 @@ public class TreeNode {
         this.right = right;
     }
 
+    /**
+     * 前序遍历
+     */
+    public void frontShow() {
+        //先遍历当前节点内容
+        System.out.println(value);
+        //遍历左节点
+        if (left != null) {
+            left.frontShow();
+        }
+        //遍历右节点
+        if (right != null) {
+            right.frontShow();
+        }
+    }
 
+    /**
+     * 中序遍历
+     */
+    public void middleShow() {
+        //先遍历左节点
+        if (left != null) {
+            left.middleShow();
+        }
+        //打印当前节点
+        System.out.println(value);
+        //先遍历右节点
+        if (right != null) {
+            right.middleShow();
+        }
+    }
 
+    /**
+     * 后序遍历
+     */
+    public void afterShow() {
+        if (left != null) {
+            left.afterShow();
+        }
+        if (right != null) {
+            right.afterShow();
+        }
+        System.out.println(value);
+    }
 }

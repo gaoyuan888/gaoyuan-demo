@@ -26,4 +26,5 @@ public class BinaryTree {
     public TreeNode getRoot() {
         return root;
     }
+
 }
