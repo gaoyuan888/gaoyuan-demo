@@ -94,15 +94,18 @@ public class TreeNode {
      */
     public TreeNode frontSearch(int i) {
         TreeNode target = null;
+        //对比当前节点的值
         if (i == value) {
             return this;
         } else {
+            //对比当左儿子的值
             if (left != null) {
                 target = left.frontSearch(i);
             }
             if (target != null) {
                 return target;
             }
+            //对比当右儿子的值
             if (right != null) {
                 target = right.frontSearch(i);
             }
