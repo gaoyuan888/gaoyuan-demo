@@ -85,4 +85,28 @@ public class TreeNode {
         }
         System.out.println(value);
     }
+
+    /**
+     * 前序查找
+     *
+     * @param i
+     * @return
+     */
+    public TreeNode frontSearch(int i) {
+        TreeNode target = null;
+        if (i == value) {
+            return this;
+        } else {
+            if (left != null) {
+                target = left.frontSearch(i);
+            }
+            if (target != null) {
+                return target;
+            }
+            if (right != null) {
+                target = right.frontSearch(i);
+            }
+        }
+        return target;
+    }
 }

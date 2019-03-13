@@ -32,13 +32,19 @@ public class TreeNodeTest {
         right.setRight(new TreeNode(7));
 
         //前序遍历
-        root.frontShow();
+        binaryTree.frontShow();
         System.out.println("*************");
         //中序遍历
-        root.middleShow();
+        binaryTree.middleShow();
         System.out.println("*************");
         //后续序遍历
-        root.afterShow();
+        binaryTree.afterShow();
+
+        System.out.println("*******前序查找******");
+
+        //前序查找
+        TreeNode node = binaryTree.frontSearch(4);
+        System.out.println(node.toString());
 
     }
 }
