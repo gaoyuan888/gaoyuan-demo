@@ -1,9 +1,9 @@
-package cn.gaoyuan.demo.algorithm.tree;
+package cn.gaoyuan.demo.algorithm.tree.listTree;
 
 import org.junit.Test;
 
 /**
- * 功能描述:
+ * 功能描述:链式存储二叉树
  *
  * @author yaoyizhou
  * @date 2019/3/13 18:43
