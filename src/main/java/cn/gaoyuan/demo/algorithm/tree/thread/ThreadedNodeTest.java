@@ -3,7 +3,7 @@ package cn.gaoyuan.demo.algorithm.tree.thread;
 import org.junit.Test;
 
 /**
- * 功能描述:链式存储二叉树
+ * 功能描述:线索化二叉树
  *
  * @author yaoyizhou
  * @date 2019/3/13 18:43
