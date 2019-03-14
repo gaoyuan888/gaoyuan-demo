@@ -17,6 +17,25 @@ public class ThreadedBinaryTree {
     ThreadedNode tmpPreNode;
 
     /**
+     * 遍历线索二叉树
+     */
+    public void threadIterate() {
+        //临时存储当前遍历节点
+        ThreadedNode tmp = root;
+        if (tmp != null) {
+            //循环找到最开始的节点
+            while (tmp.leftType == 0) {
+                tmp = tmp.left;
+            }
+            //打印当前节点的值
+            System.out.println(tmp.value);
+
+            //
+            tmp = tmp.right;
+        }
+    }
+
+    /**
      * 設置根节点
      *
      * @param root
