@@ -2,6 +2,8 @@ package cn.gaoyuan.demo.algorithm.tree.thread;
 
 /**
  * 功能描述:线索化二叉树
+ * <p>
+ * 线索化二叉树生成方式还是不是很清楚，遍历方法需要回头再仔细看一下
  *
  * @author yaoyizhou
  * @date 2019/3/13 18:44
@@ -22,7 +24,7 @@ public class ThreadedBinaryTree {
     public void threadIterate() {
         //临时存储当前遍历节点
         ThreadedNode node = root;
-        if (node != null) {
+        while (node != null) {
             //循环找到最开始的节点
             while (node.leftType == 0) {
                 node = node.left;
@@ -36,7 +38,7 @@ public class ThreadedBinaryTree {
                 System.out.println(node.value);
             }
             // 替换遍历的节点
-            node=node.right;
+            node = node.right;
         }
     }
 

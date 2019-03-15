@@ -38,9 +38,7 @@ public class ThreadedNodeTest {
         //中序线索化二叉树
         binaryTree.threadNodes();
 
-        //获取5节点的后继节点
-        ThreadedNode afterFive = fiveNode.right;
-
-        System.out.println(afterFive.value);
+//      中序遍历线索化二叉树
+        binaryTree.threadIterate();
     }
 }
