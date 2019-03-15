@@ -21,17 +21,22 @@ public class ThreadedBinaryTree {
      */
     public void threadIterate() {
         //临时存储当前遍历节点
-        ThreadedNode tmp = root;
-        if (tmp != null) {
+        ThreadedNode node = root;
+        if (node != null) {
             //循环找到最开始的节点
-            while (tmp.leftType == 0) {
-                tmp = tmp.left;
+            while (node.leftType == 0) {
+                node = node.left;
             }
             //打印当前节点的值
-            System.out.println(tmp.value);
+            System.out.println(node.value);
 
-            //
-            tmp = tmp.right;
+            //如果当前节点的右指针指向的是后继节点，可能后继节点还有后继节点
+            while (node.rightType == 1) {
+                node = node.right;
+                System.out.println(node.value);
+            }
+            // 替换遍历的节点
+            node=node.right;
         }
     }
 
