@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.algorithm.tree.listTree;
+package cn.gaoyuan.demo.algorithm.tree.listtree;
 
 /**
  * 功能描述:链式存储二叉树

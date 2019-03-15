@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.algorithm.tree.heapSort;
+package cn.gaoyuan.demo.algorithm.tree.heapsort;
 
 import org.junit.Test;
 
