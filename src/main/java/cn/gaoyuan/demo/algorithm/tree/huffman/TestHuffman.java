@@ -18,7 +18,7 @@ public class TestHuffman {
     public void test() {
         int[] arr = {3, 5, 7, 8, 11, 23, 14, 29};
 
-        Node huffmanTree = createHuffmanTree(arr);
+//        Node huffmanTree = createHuffmanTree(arr);
     }
 
     /**
@@ -27,25 +27,25 @@ public class TestHuffman {
      * @param arr
      * @return
      */
-    public Node createHuffmanTree(int[] arr) {
-
-        //先使用数组中所有的元素创建若干个二叉树（只有一个节点）
-        List<Node> nodes = new ArrayList<>();
-        for (int value : arr) {
-            nodes.add(new Node(value));
-        }
-        //排序
-
-
-
-        //取出来权值最小的两个二叉树
-
-        //创建一颗新的二叉树
-
-        //把取出来的两个二叉树移除
-
-        //放入原来的二叉树集合中
-
-
-    }
+//    public Node createHuffmanTree(int[] arr) {
+//
+//        //先使用数组中所有的元素创建若干个二叉树（只有一个节点）
+//        List<Node> nodes = new ArrayList<>();
+//        for (int value : arr) {
+//            nodes.add(new Node(value));
+//        }
+//        //排序
+//
+//
+//
+//        //取出来权值最小的两个二叉树
+//
+//        //创建一颗新的二叉树
+//
+//        //把取出来的两个二叉树移除
+//
+//        //放入原来的二叉树集合中
+//
+//
+//    }
 }
