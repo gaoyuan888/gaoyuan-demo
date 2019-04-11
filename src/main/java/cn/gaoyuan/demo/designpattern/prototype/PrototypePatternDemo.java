@@ -12,14 +12,14 @@ public class PrototypePatternDemo {
     public static void main(String[] args) {
         ShapeCache.loadCache();
 
-        Shap shap = ShapeCache.getShap("1");
-        System.out.println(shap.getType());
+        Shape shape = ShapeCache.getShap("1");
+        System.out.println(shape.getType());
 
-        Shap shap2 = ShapeCache.getShap("2");
-        System.out.println(shap2.getType());
+        Shape shape2 = ShapeCache.getShap("2");
+        System.out.println(shape2.getType());
 
-        Shap shap3 = ShapeCache.getShap("3");
-        System.out.println(shap3.getType());
+        Shape shape3 = ShapeCache.getShap("3");
+        System.out.println(shape3.getType());
 
 
     }

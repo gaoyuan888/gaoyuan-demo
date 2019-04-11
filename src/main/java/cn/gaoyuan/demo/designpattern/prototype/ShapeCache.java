@@ -11,11 +11,11 @@ import java.util.Hashtable;
  */
 public class ShapeCache {
 
-    private static Hashtable<String, Shap> shapeMap = new Hashtable<>();
+    private static Hashtable<String, Shape> shapeMap = new Hashtable<>();
 
-    public static Shap getShap(String shapeId) {
-        Shap catchShap = shapeMap.get(shapeId);
-        return (Shap) catchShap.clone();
+    public static Shape getShap(String shapeId) {
+        Shape catchShape = shapeMap.get(shapeId);
+        return (Shape) catchShape.clone();
     }
 
     // 对每种形状都运行数据库查询，并创建该形状

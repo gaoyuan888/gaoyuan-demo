@@ -7,7 +7,7 @@ package cn.gaoyuan.demo.designpattern.prototype;
  * @date 2019/4/11 18:01
  * @desc
  */
-public class Square extends Shap {
+public class Square extends Shape {
     public Square() {
         type = "Square";
     }

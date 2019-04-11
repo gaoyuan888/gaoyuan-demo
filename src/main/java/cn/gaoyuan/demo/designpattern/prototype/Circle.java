@@ -7,7 +7,7 @@ package cn.gaoyuan.demo.designpattern.prototype;
  * @date 2019/4/11 18:02
  * @desc
  */
-public class Circle extends Shap {
+public class Circle extends Shape {
     public Circle() {
         type = "Circle";
     }

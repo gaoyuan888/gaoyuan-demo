@@ -7,7 +7,7 @@ package cn.gaoyuan.demo.designpattern.prototype;
  * @date 2019/4/11 16:18
  * @desc
  */
-public abstract class Shap implements Cloneable {
+public abstract class Shape implements Cloneable {
     private String id;
     protected String type;
 

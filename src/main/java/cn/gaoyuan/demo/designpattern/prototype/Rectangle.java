@@ -7,7 +7,7 @@ package cn.gaoyuan.demo.designpattern.prototype;
  * @date 2019/4/11 17:59
  * @desc
  */
-public class Rectangle extends Shap {
+public class Rectangle extends Shape {
     public Rectangle() {
         type = "Rectangle";
     }
