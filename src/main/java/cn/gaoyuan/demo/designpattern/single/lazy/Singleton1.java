@@ -1,7 +1,7 @@
 package cn.gaoyuan.demo.designpattern.single.lazy;
 
 /**
- * 功能描述:
+ * 功能描述: 懒汉式1
  * 是否 Lazy 初始化：是
  * 是否多线程安全：否
  * 实现难度：易
