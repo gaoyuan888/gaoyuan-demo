@@ -1,11 +1,10 @@
-package cn.gaoyuan.demo.designpattern.absfactory.factory;
+package cn.gaoyuan.demo.designpattern.factory.absfactory.factory;
 
-import cn.gaoyuan.demo.designpattern.absfactory.color.Color;
-import cn.gaoyuan.demo.designpattern.absfactory.shap.CircleShap;
-import cn.gaoyuan.demo.designpattern.absfactory.shap.RectangleShap;
-import cn.gaoyuan.demo.designpattern.absfactory.shap.Shap;
-import cn.gaoyuan.demo.designpattern.absfactory.shap.SquareShap;
-import javafx.scene.shape.Circle;
+import cn.gaoyuan.demo.designpattern.factory.absfactory.color.Color;
+import cn.gaoyuan.demo.designpattern.factory.absfactory.shap.CircleShap;
+import cn.gaoyuan.demo.designpattern.factory.absfactory.shap.RectangleShap;
+import cn.gaoyuan.demo.designpattern.factory.absfactory.shap.Shap;
+import cn.gaoyuan.demo.designpattern.factory.absfactory.shap.SquareShap;
 
 /**
  * 功能描述:

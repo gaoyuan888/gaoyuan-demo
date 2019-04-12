@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.designpattern.absfactory.shap;
+package cn.gaoyuan.demo.designpattern.factory.absfactory.shap;
 
 /**
  * 功能描述:

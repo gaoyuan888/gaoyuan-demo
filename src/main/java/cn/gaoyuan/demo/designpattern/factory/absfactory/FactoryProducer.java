@@ -1,8 +1,8 @@
-package cn.gaoyuan.demo.designpattern.absfactory;
+package cn.gaoyuan.demo.designpattern.factory.absfactory;
 
-import cn.gaoyuan.demo.designpattern.absfactory.factory.AbstractFactory;
-import cn.gaoyuan.demo.designpattern.absfactory.factory.ColorFactory;
-import cn.gaoyuan.demo.designpattern.absfactory.factory.ShapeFactory;
+import cn.gaoyuan.demo.designpattern.factory.absfactory.factory.AbstractFactory;
+import cn.gaoyuan.demo.designpattern.factory.absfactory.factory.ColorFactory;
+import cn.gaoyuan.demo.designpattern.factory.absfactory.factory.ShapeFactory;
 
 /**
  * 功能描述:

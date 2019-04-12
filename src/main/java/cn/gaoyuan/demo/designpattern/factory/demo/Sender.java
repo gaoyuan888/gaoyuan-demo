@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.designpattern.factory;
+package cn.gaoyuan.demo.designpattern.factory.demo;
 
 /**
  * 功能描述: 工厂设计模式

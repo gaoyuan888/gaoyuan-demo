@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.designpattern.absfactory.color;
+package cn.gaoyuan.demo.designpattern.factory.absfactory.color;
 
 /**
  * 功能描述:
