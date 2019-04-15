@@ -1,7 +1,7 @@
 package cn.gaoyuan.demo.designpattern.factory.demo2;
 
 /**
- * 功能描述:
+ * 功能描述:静态工厂
  *
  * @author yaoyizhou
  * @date 2019/4/15 20:05
