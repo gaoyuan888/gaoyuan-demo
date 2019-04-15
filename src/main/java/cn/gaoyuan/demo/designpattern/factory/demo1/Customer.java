@@ -14,5 +14,8 @@ public class Customer {
 
         TrunkFactory aodi=new AodiTrunkFactory();
         aodi.produceTrunk().run();
+
+        TrunkFactory dz=new DzTrunkFactory();
+        dz.produceTrunk().run();
     }
 }
