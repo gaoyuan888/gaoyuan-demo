@@ -1,21 +1,15 @@
 package cn.gaoyuan.demo.designpattern.factory.demo1;
 
 /**
- * 功能描述:
+ * 功能描述:静态工厂
  *
  * @author yaoyizhou
- * @date 2019/4/15 20:34
+ * @date 2019/4/15 20:05
  * @desc
  */
 public class Customer {
     public static void main(String[] args) {
-        TrunkFactory bwm=new BwmTrunkFactory();
-        bwm.produceTrunk().run();
-
-        TrunkFactory aodi=new AodiTrunkFactory();
-        aodi.produceTrunk().run();
-
-        TrunkFactory dz=new DzTrunkFactory();
-        dz.produceTrunk().run();
+        TrunkFactory.produceTrunk("宝马").run();
+        TrunkFactory.produceTrunk("奥迪").run();
     }
 }
