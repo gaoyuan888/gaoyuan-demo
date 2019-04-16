@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.designpattern.builder.demo;
+package cn.gaoyuan.demo.designpattern.builder.demo5;
 
 /**
  * 功能描述:
