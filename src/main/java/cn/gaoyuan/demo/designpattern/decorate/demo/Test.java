@@ -19,5 +19,8 @@ public class Test {
         //可乐
         Drink baishi=new BaiShiDecorator(new ColaDrink());
         System.out.println(baishi.name()+":"+baishi.price());
+
+        Drink kekou=new KeKouDecorator(new ColaDrink());
+        System.out.println(kekou.name()+":"+kekou.price());
     }
 }
