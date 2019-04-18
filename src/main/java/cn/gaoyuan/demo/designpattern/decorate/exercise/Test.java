@@ -9,7 +9,7 @@ package cn.gaoyuan.demo.designpattern.decorate.exercise;
  */
 public class Test {
     public static void main(String[] args) {
-        Cake cake=new ConcreteDecorateCake(new PotatoCake());
+        Cake cake=new ConcreteCakeDecorator(new PotatoCake());
         System.out.println(cake.flaver());
     }
 }

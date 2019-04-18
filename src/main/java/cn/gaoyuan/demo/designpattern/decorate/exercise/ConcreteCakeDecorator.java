@@ -7,9 +7,9 @@ package cn.gaoyuan.demo.designpattern.decorate.exercise;
  * @date 2019/4/18 20:32
  * @desc
  */
-public class ConcreteDecorateCake extends Decorator {
+public class ConcreteCakeDecorator extends Decorator {
 
-    public ConcreteDecorateCake(Cake cake) {
+    public ConcreteCakeDecorator(Cake cake) {
         super(cake);
     }
 
