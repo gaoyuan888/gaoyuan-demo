@@ -24,6 +24,6 @@ public class YanJingDecorator extends Decorator {
 
     @Override
     public double price() {
-        return drink.price() + 4.00;
+        return drink.price() + 3.00;
     }
 }
