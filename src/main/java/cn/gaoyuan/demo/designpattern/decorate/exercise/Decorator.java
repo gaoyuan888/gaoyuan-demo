@@ -1,7 +1,7 @@
 package cn.gaoyuan.demo.designpattern.decorate.exercise;
 
 /**
- * 功能描述:基类
+ * 功能描述:基类装饰者
  *
  * @author yaoyizhou
  * @date 2019/4/18 20:30

@@ -5,7 +5,7 @@ package cn.gaoyuan.demo.designpattern.decorate.exercise;
  *
  * @author yaoyizhou
  * @date 2019/4/18 20:32
- * @desc
+ * @desc 具体装饰者继承基类装饰者对基本产品进行装饰
  */
 public class ConcreteCakeDecorator extends Decorator {
 
