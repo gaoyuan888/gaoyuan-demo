@@ -7,7 +7,7 @@ package cn.gaoyuan.demo.algorithm.tree.huffman;
  * @date 2019/3/15 21:36
  * @desc
  */
-public class Node {
+public class Node implements Comparable<Node> {
 
     int value;
     Node left;
@@ -15,5 +15,10 @@ public class Node {
 
     public Node(int value) {
         this.value = value;
+    }
+
+    @Override
+    public int compareTo(Node node) {
+        return this.value-node.value;
     }
 }
