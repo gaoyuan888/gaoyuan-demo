@@ -1,5 +1,6 @@
 package cn.gaoyuan.demo.algorithm.tree.huffman.demo1;
 
+import java.io.StringWriter;
 import java.util.*;
 
 public class TestHuffmanCode {
@@ -24,9 +25,19 @@ public class TestHuffmanCode {
         //创建一棵霍夫曼树
         Node tree = createHuffmanTree(nodes);
         //创建一颗霍夫曼编码表出来
-
+        Map<Byte,String> huffCodes=getCodes(tree);
         //编码
         return null;
+    }
+
+    static StringBuilder sb=new StringBuilder();
+    private static Map<Byte,String> getCodes(Node tree) {
+        //递归
+        if(tree==null){
+            return null;
+        }
+
+
     }
 
     /**
