@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.algorithm.tree.huffman;
+package cn.gaoyuan.demo.algorithm.tree.huffman.demo;
 
 import org.junit.Test;
 
