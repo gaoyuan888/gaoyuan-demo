@@ -2,24 +2,99 @@ package cn.gaoyuan.demo.algorithm.tree.huffman.demo1;
 
 import java.util.*;
 
+/**
+ *
+ */
 public class TestHuffmanCode {
 
     public static void main(String[] args) {
         String msg = "can you can a can as a can canner can a can";
         byte[] bytes = msg.getBytes();
         //进行霍夫曼编码
-        byte[] b = huffmanCode(bytes);
-        System.out.println(bytes.length);
-        System.out.println(b.length);
+        byte[] b = huffmanZip(bytes);
+        //使用霍夫曼编码进行解码
+        byte[] newByte = decode(b, huffCodes);
+//        System.out.println(Arrays.toString(bytes));
+//        System.out.println(Arrays.toString(newByte));
+        System.out.println(new String(newByte));
+    }
+
+    /**
+     * 使用指定的霍夫曼编码表进行解码
+     *
+     * @param bytes
+     * @param huffCodes
+     * @return
+     */
+    private static byte[] decode(byte[] bytes, Map<Byte, String> huffCodes) {
+        StringBuilder sb = new StringBuilder();
+        //把byte数组转为一个二进制的字符串
+        for (int i = 0; i < bytes.length; i++) {
+            byte b = bytes[i];
+            //是否是最后一个
+            boolean flag = (i == bytes.length - 1);
+            sb.append(byteToBitStr(!flag, b));
+        }
+
+
+        //把字符串按照指定的霍夫曼编码进行解码
+        //把霍夫曼编码的键值对进行调换
+        Map<String, Byte> map = new HashMap<>();
+        for (Map.Entry<Byte, String> entry : huffCodes.entrySet()) {
+            map.put(entry.getValue(), entry.getKey());
+        }
+        //创建一个集合用于存储byte数组
+        List<Byte> list=new ArrayList<>();
+
+        //处理字符串
+        for (int i = 0; i < sb.length(); ) {
+            int count = 1;
+            boolean flag = true;
+            Byte b = null;
+            //截取出一个key
+            while (flag) {
+                String s = sb.substring(i, i + count);
+                b = map.get(s);
+                if (b == null) {
+                    count++;
+                } else {
+                    flag = false;
+                }
+            }
+            list.add(b);
+            i += count;
+        }
+        System.out.println(list);
+        //把集合转为数组
+        byte[]b=new byte[list.size()];
+        for(int i=0;i<b.length;i++){
+            b[i]=list.get(i);
+        }
+        return b;
+    }
+
+    //保证正整数能够用0 补齐
+    private static String byteToBitStr(boolean flag, byte b) {
+        int tmp = b;
+        if (flag) {
+            tmp |= 256;
+        }
+        String res = Integer.toBinaryString(tmp);
+        if (flag) {
+            return res.substring(res.length() - 8);
+        } else {
+            return res;
+        }
     }
 
     /**
      * 进行霍夫曼编码压缩的方法
+     * 霍夫曼编码才用前缀编码，不会出现重复的现象
      *
      * @param bytes
      * @return
      */
-    private static byte[] huffmanCode(byte[] bytes) {
+    private static byte[] huffmanZip(byte[] bytes) {
         //先统计每一个byte出现的次数，并放入一个集合中
         List<Node> nodes = getNodes(bytes);
         //创建一棵霍夫曼树
@@ -63,7 +138,7 @@ public class TestHuffmanCode {
                 strByte = sb.substring(i, i + 8);
             }
             byte byt = (byte) Integer.parseInt(strByte, 2);
-            by[index++]=byt;
+            by[index++] = byt;
             System.out.println(strByte);
         }
         return by;
