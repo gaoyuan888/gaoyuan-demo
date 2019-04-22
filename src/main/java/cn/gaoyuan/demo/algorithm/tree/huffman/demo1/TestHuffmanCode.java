@@ -1,5 +1,6 @@
 package cn.gaoyuan.demo.algorithm.tree.huffman.demo1;
 
+import java.io.*;
 import java.util.*;
 
 /**
@@ -8,15 +9,52 @@ import java.util.*;
 public class TestHuffmanCode {
 
     public static void main(String[] args) {
-        String msg = "can you can a can as a can canner can a can";
-        byte[] bytes = msg.getBytes();
-        //进行霍夫曼编码
-        byte[] b = huffmanZip(bytes);
-        //使用霍夫曼编码进行解码
-        byte[] newByte = decode(b, huffCodes);
-//        System.out.println(Arrays.toString(bytes));
-//        System.out.println(Arrays.toString(newByte));
-        System.out.println(new String(newByte));
+//        String msg = "can you can a can as a can canner can a can";
+//        byte[] bytes = msg.getBytes();
+//        //进行霍夫曼编码
+//        byte[] b = huffmanZip(bytes);
+//        //使用霍夫曼编码进行解码
+//        byte[] newByte = decode(b, huffCodes);
+//        System.out.println(new String(newByte));
+
+        String src = "1.bmp";
+        String dst = "2.zip";
+        try {
+            zipFile(src, dst);
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    public static void zipFile(String src, String dst) {
+        try {
+            //创建一个输入流
+            InputStream is = new FileInputStream(src);
+            //创建一个和输入流指向文件大小一样的byte数组
+            byte[] b = new byte[is.available()];
+            //读取文件内容
+            is.read(b);
+            is.close();
+            //使用霍夫曼编码进行编码
+            byte[] byteZip = huffmanZip(b);
+            //输出流
+            OutputStream os=new FileOutputStream(dst);
+            ObjectOutputStream oos=new ObjectOutputStream(os);
+            //吧压缩后的byte数组写入文件
+            oos.writeObject(byteZip);
+            //把霍夫曼编码表写入文件
+            oos.writeObject(huffCodes);
+            oos.close();
+            os.close();
+
+//            System.out.println(b.length);
+//            System.out.println(byteZip.length);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -64,7 +102,7 @@ public class TestHuffmanCode {
             list.add(b);
             i += count;
         }
-        System.out.println(list);
+//        System.out.println(list);
         //把集合转为数组
         byte[] b = new byte[list.size()];
         for (int i = 0; i < b.length; i++) {
@@ -139,7 +177,7 @@ public class TestHuffmanCode {
             }
             byte byt = (byte) Integer.parseInt(strByte, 2);
             by[index++] = byt;
-            System.out.println(strByte);
+//            System.out.println(strByte);
         }
         return by;
     }
@@ -221,7 +259,7 @@ public class TestHuffmanCode {
         for (Map.Entry<Byte, Integer> entry : counts.entrySet()) {
             list.add(new Node(entry.getKey(), entry.getValue()));
         }
-        System.out.println(counts);
+//        System.out.println(counts);
         return list;
     }
 }
