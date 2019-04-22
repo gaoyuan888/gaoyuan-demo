@@ -44,7 +44,7 @@ public class TestHuffmanCode {
             map.put(entry.getValue(), entry.getKey());
         }
         //创建一个集合用于存储byte数组
-        List<Byte> list=new ArrayList<>();
+        List<Byte> list = new ArrayList<>();
 
         //处理字符串
         for (int i = 0; i < sb.length(); ) {
@@ -66,9 +66,9 @@ public class TestHuffmanCode {
         }
         System.out.println(list);
         //把集合转为数组
-        byte[]b=new byte[list.size()];
-        for(int i=0;i<b.length;i++){
-            b[i]=list.get(i);
+        byte[] b = new byte[list.size()];
+        for (int i = 0; i < b.length; i++) {
+            b[i] = list.get(i);
         }
         return b;
     }
