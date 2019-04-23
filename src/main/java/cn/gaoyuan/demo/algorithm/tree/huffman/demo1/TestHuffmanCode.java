@@ -17,15 +17,56 @@ public class TestHuffmanCode {
 //        byte[] newByte = decode(b, huffCodes);
 //        System.out.println(new String(newByte));
 
-        String src = "1.bmp";
-        String dst = "2.zip";
-        try {
-            zipFile(src, dst);
+//        String src = "1.bmp";
+//        String dst = "2.zip";
+//        try {
+//            zipFile(src, dst);
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
+
+        try {
+            unZip("2.zip", "3.bmp");
         } catch (Exception e) {
 
         }
     }
+
+    /**
+     * 解压缩方法
+     *
+     * @param src
+     * @param dst
+     * @throws Exception
+     */
+    private static void unZip(String src, String dst) throws Exception {
+        //先读物文件数据
+        //创建一个输入流
+        InputStream is = new FileInputStream("2.zip");
+        ObjectInputStream ois = new ObjectInputStream(is);
+        //读物byte数组
+        byte[] b = (byte[]) ois.readObject();
+
+        //读取霍夫曼编码表
+        Map<Byte, String> codes = (Map<Byte, String>) ois.readObject();
+
+        ois.close();
+
+        is.close();
+
+        //解码
+        byte[] bytes = decode(b, codes);
+
+        //创建一个输出流
+        OutputStream os = new FileOutputStream(dst);
+        os.write(bytes);
+        os.close();
+
+
+    }
+
 
     public static void zipFile(String src, String dst) {
         try {
@@ -39,8 +80,8 @@ public class TestHuffmanCode {
             //使用霍夫曼编码进行编码
             byte[] byteZip = huffmanZip(b);
             //输出流
-            OutputStream os=new FileOutputStream(dst);
-            ObjectOutputStream oos=new ObjectOutputStream(os);
+            OutputStream os = new FileOutputStream(dst);
+            ObjectOutputStream oos = new ObjectOutputStream(os);
             //吧压缩后的byte数组写入文件
             oos.writeObject(byteZip);
             //把霍夫曼编码表写入文件
