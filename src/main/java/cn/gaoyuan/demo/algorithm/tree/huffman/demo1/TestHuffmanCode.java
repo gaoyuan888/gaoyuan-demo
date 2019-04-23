@@ -17,14 +17,14 @@ public class TestHuffmanCode {
 //        byte[] newByte = decode(b, huffCodes);
 //        System.out.println(new String(newByte));
 
-//        String src = "1.bmp";
-//        String dst = "2.zip";
-//        try {
-//            zipFile(src, dst);
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        String src = "1.bmp";
+        String dst = "2.zip";
+        try {
+            zipFile(src, dst);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
         try {
