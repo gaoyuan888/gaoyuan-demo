@@ -51,13 +51,13 @@ public class Node {
      *
      * @param node
      */
-    public void frontShow(Node node) {
+    public void middleShow(Node node) {
         if (node == null) {
             return;
         }
-        frontShow(node.left);
+        middleShow(node.left);
         System.out.println(node.value);
-        frontShow(node.right);
+        middleShow(node.right);
 
     }
 

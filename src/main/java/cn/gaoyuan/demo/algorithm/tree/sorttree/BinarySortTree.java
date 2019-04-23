@@ -27,11 +27,12 @@ public class BinarySortTree {
     /**
      * 中序遍历二叉树，从小到大遍历
      */
-    public void frontShow() {
+    public void middleShow() {
         if (root != null) {
-            root.frontShow(root);
+            root.middleShow(root);
         }
     }
+
 
     /**
      * 节点查找

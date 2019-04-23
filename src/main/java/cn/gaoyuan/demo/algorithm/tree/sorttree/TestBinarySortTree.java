@@ -15,8 +15,12 @@ public class TestBinarySortTree {
         for (int i : arr) {
             bst.add(new Node(i));
         }
+
+        System.out.println("=========遍历========");
         //中序遍历二叉树
-        bst.frontShow();
+        bst.middleShow();
+
+        System.out.println("=========节点查找========");
 
         Node search = bst.search(10);
         System.out.println(search.value);
