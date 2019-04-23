@@ -16,7 +16,7 @@ public class TestBinarySortTree {
             bst.add(new Node(i));
         }
 
-        System.out.println("=========遍历========");
+        System.out.println("=========中序遍历========");
         //中序遍历二叉树
         bst.middleShow();
 
