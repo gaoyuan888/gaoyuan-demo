@@ -60,4 +60,21 @@ public class Node {
         frontShow(node.right);
 
     }
+
+    /**
+     * 节点查找
+     *
+     * @param value
+     * @return
+     */
+    public Node search(int value) {
+        if (this.value == value) {
+            return this;
+        } else if (this.value > value) {
+
+            return left == null ? null : left.search(value);
+        } else {
+            return right == null ? null : right.search(value);
+        }
+    }
 }

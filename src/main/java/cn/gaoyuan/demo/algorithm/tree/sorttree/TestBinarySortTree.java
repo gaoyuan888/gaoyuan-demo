@@ -17,5 +17,11 @@ public class TestBinarySortTree {
         }
         //中序遍历二叉树
         bst.frontShow();
+
+        Node search = bst.search(10);
+        System.out.println(search.value);
+
+        Node search1 = bst.search(20);
+        System.out.println(search1);
     }
 }
