@@ -77,4 +77,25 @@ public class Node {
             return right == null ? null : right.search(value);
         }
     }
+
+    /**
+     * 搜索当前节点的父节点
+     *
+     * @param value
+     * @return
+     */
+    public Node searchParent(int value) {
+        if ((this.left != null && this.left.value == value) || (this.right != null && this.right.value == value)) {
+            return this;
+        } else {
+            if (this.value > value && this.left != null) {
+                return this.left.searchParent(value);
+            } else if (this.value < value && this.right != null) {
+                return this.right.searchParent(value);
+            }
+            return null;
+        }
+
+
+    }
 }

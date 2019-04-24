@@ -48,5 +48,42 @@ public class BinarySortTree {
 
     }
 
+    /**
+     * 删除
+     *
+     * @param value
+     */
+    public void delete(int value) {
+        if (root == null) {
+            return;
+        }
+        //找到这个节点
+        Node target = search(value);
+        if (target == null) {
+            return;
+        }
+        //找到父节点
+        Node parent = searchParent(value);
+        //要删除节点是叶子节点
+        if (target.left == null && target.left == null) {
+            //要删除的节点是父节点的左节点
+            if (parent.left.value == value) {
+                parent.left = null;
+            } else {
+                parent.right = null;
+            }
+        }
+
+//        root.delete(new Node(value));
+    }
+
+    public Node searchParent(int value) {
+        if (root == null) {
+            return null;
+        } else {
+            return root.searchParent(value);
+        }
+
+    }
 
 }

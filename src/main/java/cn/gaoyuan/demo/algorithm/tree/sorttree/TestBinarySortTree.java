@@ -9,7 +9,7 @@ package cn.gaoyuan.demo.algorithm.tree.sorttree;
  */
 public class TestBinarySortTree {
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 3, 5, 7, 9, 10, 12};
+        int[] arr = new int[]{7, 3, 10, 12, 5, 1, 9};
         BinarySortTree bst = new BinarySortTree();
         //循环添加
         for (int i : arr) {
@@ -27,5 +27,15 @@ public class TestBinarySortTree {
 
         Node search1 = bst.search(20);
         System.out.println(search1);
+
+        System.out.println("=========查找父节点========");
+        //测试查找父节点
+        Node node = bst.searchParent(1);
+        System.out.println(node.value);
+
+        System.out.println("=========删除节点========");
+        bst.delete(5);
+        bst.middleShow();
+
     }
 }
