@@ -20,22 +20,29 @@ public class TestBinarySortTree {
         //中序遍历二叉树
         bst.middleShow();
 
-        System.out.println("=========节点查找========");
+//        System.out.println("=========节点查找========");
+//
+//        Node search = bst.search(10);
+//        System.out.println(search.value);
+//
+//        Node search1 = bst.search(20);
+//        System.out.println(search1);
+//
+//        System.out.println("=========查找父节点========");
+//        //测试查找父节点
+//        Node node = bst.searchParent(1);
+//        System.out.println(node.value);
+//
+//        System.out.println("=========删除节点叶子节点========");
+//        bst.delete(5);
+//        bst.middleShow();
+//
+//        System.out.println("=========删除只有一个子节点的节点========");
+//        bst.delete(3);
+//        bst.middleShow();
 
-        Node search = bst.search(10);
-        System.out.println(search.value);
-
-        Node search1 = bst.search(20);
-        System.out.println(search1);
-
-        System.out.println("=========查找父节点========");
-        //测试查找父节点
-        Node node = bst.searchParent(1);
-        System.out.println(node.value);
-
-        System.out.println("=========删除节点========");
-        bst.delete(5);
+        System.out.println("============删除有两个子节点的节点=============");
+        bst.delete(7);
         bst.middleShow();
-
     }
 }
