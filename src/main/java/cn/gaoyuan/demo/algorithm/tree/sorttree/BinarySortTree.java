@@ -77,6 +77,7 @@ public class BinarySortTree {
 //        root.delete(new Node(value));
     }
 
+    //查找父节点
     public Node searchParent(int value) {
         if (root == null) {
             return null;
