@@ -1,5 +1,8 @@
 package cn.gaoyuan.demo.algorithm.hashdemo;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 功能描述:
  *
@@ -25,6 +28,8 @@ public class HashTableTest {
         StudentInfo studentInfo = new StudentInfo(18);
         StudentInfo studentInfo1 = ht.get(studentInfo);
         System.out.println(studentInfo1);
+
+        Map map=new HashMap<>();
     }
 
 }
