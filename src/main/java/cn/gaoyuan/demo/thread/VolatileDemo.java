@@ -1,6 +1,9 @@
 package cn.gaoyuan.demo.thread;
 
-import java.util.concurrent.*;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 class Student {
     volatile int age = 0;
@@ -8,18 +11,44 @@ class Student {
     public void addage() {
         this.age = 2;
     }
+
+    //    此时，age 是加了volatile修饰的，volatile不保证原子性
+    public void addPlusPlus() {
+        age++;
+    }
 }
 
 /**
- * vilatile 可见性
+ * 1.验证vilatile 保证可见性
+ * 1.1 例如 int num =0; num 变量之前根本没有添加volatile 关键字修饰，没有可见性
+ * 1.2 添加了volatile 可以解决可见性问题
+ * 2.验证volatile不保证原子性
+ * 2.1 原子性指的是什么意思？
+ * 不可可分割，完整性，也既某个线程正在做的具体业务，中间不可以被分割或者加塞，需要完整，要么同时成功，要么同时失败。
  */
 public class VolatileDemo {
-    public final int count = 0;
-    public static int threadTotal = 2;
-    public static int clienttotal = 500;
-
 
     public static void main(String[] args) throws Exception {
+        Student sd = new Student();
+        ExecutorService executorService = Executors.newCachedThreadPool();
+        CountDownLatch countDownLatch = new CountDownLatch(20);
+        for (int i = 1; i <= 20; i++) {
+            executorService.execute(() -> {
+                for (int j = 0; j < 1000; j++) {
+                    sd.addPlusPlus();
+                }
+                countDownLatch.countDown();
+            });
+        }
+//        需要等待上面20个线程都计算完成后，在用main线程取得最终结果值看是多少
+        countDownLatch.await();
+        System.out.println(sd.age);
+        executorService.shutdown();
+    }
+
+
+    //volatile保证可见性，及时通知其他线程，主物理内存的值已经被修改。
+    public static void seeOkByVolatile() {
         Student sd = new Student();
         ExecutorService threadService = Executors.newCachedThreadPool();
         threadService.execute(() -> {
@@ -31,16 +60,12 @@ public class VolatileDemo {
             }
         });
 
-        while (sd.age == 0) {
+        threadService.execute(() -> {
+            while (sd.age == 0) {
 
-        }
-
-        System.out.println(sd.age);
-
-        threadService.shutdown();
+            }
+            System.out.println(sd.age);
+        });
     }
-
-    public static void add() {
-    }
-
 }
+
