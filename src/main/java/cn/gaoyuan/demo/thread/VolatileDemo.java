@@ -12,8 +12,8 @@ class Student {
         this.age = 2;
     }
 
-    //    此时，age 是加了volatile修饰的，volatile不保证原子性
-    public void addPlusPlus() {
+    //此时，age 是加了volatile修饰的，volatile不保证原子性
+    public synchronized void addPlusPlus() {
         age++;
     }
 }
@@ -67,5 +67,6 @@ public class VolatileDemo {
             System.out.println(sd.age);
         });
     }
+
 }
 
