@@ -17,7 +17,7 @@ public class ResortSeqDemo {
      */
     public void method1() {
         //语句1
-        int a = 1;
+        a = 1;
         //语句2
         flag = true;
     }
