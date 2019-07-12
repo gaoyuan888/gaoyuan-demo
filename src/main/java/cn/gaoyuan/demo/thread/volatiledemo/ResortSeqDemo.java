@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.thread;
+package cn.gaoyuan.demo.thread.volatiledemo;
 
 /**
  * 功能描述: 编译器指令重排序造成的问题，method2打印可能是1也可能是2

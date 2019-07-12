@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.thread;
+package cn.gaoyuan.demo.thread.volatiledemo;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.thread;
+package cn.gaoyuan.demo.thread.volatiledemo;
 
 public class T1 {
 
