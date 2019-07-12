@@ -9,6 +9,10 @@ package cn.gaoyuan.demo.thread.volatiledemo;
  */
 public class ResortSeqDemo {
 
+
+    public static void main(String[] args) {
+
+    }
     int a = 0;
     boolean flag = false;
 
