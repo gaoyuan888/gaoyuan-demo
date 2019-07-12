@@ -1,5 +1,8 @@
 package cn.gaoyuan.demo.thread.volatiledemo;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 /**
  * 功能描述:
  * 单利模式双端检索案例考点
@@ -34,10 +37,10 @@ public class SingletonDemo {
 
     }
 
-    private volatile static SingletonDemo instance = null;
+    private static SingletonDemo instance = null;
 
     private SingletonDemo() {
-
+        System.out.println("初始化单例");
     }
 
     public static SingletonDemo getInstance() {
