@@ -30,13 +30,17 @@ package cn.gaoyuan.demo.thread.volatiledemo;
  * @desc
  */
 public class SingletonDemo {
-    private volatile SingletonDemo instance = null;
+    public static void main(String[] args) {
+
+    }
+
+    private volatile static SingletonDemo instance = null;
 
     private SingletonDemo() {
 
     }
 
-    private SingletonDemo getInstance() {
+    public static SingletonDemo getInstance() {
         if (instance == null) {  //句子1
             synchronized (SingletonDemo.class) { //句子2
                 if (instance == null) { //句子3
