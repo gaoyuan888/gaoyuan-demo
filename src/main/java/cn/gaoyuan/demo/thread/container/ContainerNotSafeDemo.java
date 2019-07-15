@@ -2,6 +2,7 @@ package cn.gaoyuan.demo.thread.container;
 
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -12,8 +13,13 @@ public class ContainerNotSafeDemo {
 
     public static void main(String[] args) {
 //       listNotSafe();
+//        setNotSafe();
 
-        List<String> list = new ArrayList<>();
+    }
+
+
+    public static void setNotSafe() {
+        Set<String> list = new CopyOnWriteArraySet<>();//Collections.synchronizedSet(new HashSet<>());//new HashSet<>();
         ExecutorService executorService = Executors.newCachedThreadPool();
 
         for (int i = 0; i < 300; i++) {
@@ -24,7 +30,7 @@ public class ContainerNotSafeDemo {
         }
     }
 
-    public static void listNotSafe(){
+    public static void listNotSafe() {
         List<String> list = new CopyOnWriteArrayList<>();//Collections.synchronizedList(new ArrayList<>());//new Vector<>(); // new ArrayList<>();
         ExecutorService executorService = Executors.newCachedThreadPool();
 
