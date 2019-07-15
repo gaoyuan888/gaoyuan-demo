@@ -1,10 +1,7 @@
 package cn.gaoyuan.demo.thread.container;
 
 import java.util.*;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.CopyOnWriteArraySet;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 /**
  * 集合类线程安全问题
@@ -14,9 +11,22 @@ public class ContainerNotSafeDemo {
     public static void main(String[] args) {
 //       listNotSafe();
 //        setNotSafe();
-
+        mapNotSafe();
     }
 
+    public static void mapNotSafe() {
+//        Map map = new HashMap();
+//        Map map = Collections.synchronizedMap(new HashMap<>());
+        Map map = new ConcurrentHashMap();
+        ExecutorService executorService = Executors.newCachedThreadPool();
+
+        for (int i = 0; i < 300; i++) {
+            executorService.execute(() -> {
+                map.put(UUID.randomUUID().toString().substring(0, 8), "aaa");
+                System.out.println(map);
+            });
+        }
+    }
 
     public static void setNotSafe() {
         Set<String> list = new CopyOnWriteArraySet<>();//Collections.synchronizedSet(new HashSet<>());//new HashSet<>();
