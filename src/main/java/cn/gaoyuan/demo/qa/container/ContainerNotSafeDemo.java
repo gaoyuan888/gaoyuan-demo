@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.thread.container;
+package cn.gaoyuan.demo.qa.container;
 
 import java.util.*;
 import java.util.concurrent.*;

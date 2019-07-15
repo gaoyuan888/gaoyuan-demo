@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.thread.volatiledemo;
+package cn.gaoyuan.demo.qa.volatiledemo;
 
 /**
  * 通过javap 命令 查看汇编指令n++是实际分为3个步骤的，非原子性操作，因此可能存在并发问题

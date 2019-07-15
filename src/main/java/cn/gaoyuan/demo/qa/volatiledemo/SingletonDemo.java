@@ -1,7 +1,4 @@
-package cn.gaoyuan.demo.thread.volatiledemo;
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+package cn.gaoyuan.demo.qa.volatiledemo;
 
 /**
  * 功能描述:
