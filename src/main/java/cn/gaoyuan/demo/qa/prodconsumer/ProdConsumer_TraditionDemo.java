@@ -36,7 +36,7 @@ class ShareData {
                 condition.await();
             }
             number--;
-            System.out.println(Thread.currentThread().getName() + "number:" + number);
+            System.out.println(Thread.currentThread().getName() + "：number:" + number);
             condition.signalAll();
 
         } catch (Exception e) {
