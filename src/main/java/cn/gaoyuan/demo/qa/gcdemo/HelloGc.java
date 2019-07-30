@@ -38,7 +38,6 @@ public class HelloGc {
                 str.intern();
             }
 
-
         } catch (Exception e) {
 
         }
