@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class AppTest implements App11
 {
     /**
      * Rigorous Test :-)
@@ -16,5 +16,14 @@ public class AppTest
     public void shouldAnswerWithTrue()
     {
         assertTrue( true );
+    }
+
+    public void test(){
+        System.out.println("fdafdsafds");
+    }
+
+    @Override
+    public void print() {
+
     }
 }
