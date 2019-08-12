@@ -45,7 +45,8 @@ public class InvokeHandler extends ChannelInboundHandlerAdapter {
         } else {
             //把集合转换为数组
             Class[] classes = ImplClassSet.toArray(new Class[0]);
-            return classes[0].getName(); //得到实现类的名字
+            //得到实现类的名字
+            return classes[0].getName();
         }
     }
 }
