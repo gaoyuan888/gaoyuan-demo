@@ -1,10 +1,10 @@
-package cn.gaoyuan.demo.netty.rpc;
+package cn.gaoyuan.demo.netty.rpc.server;
 
 /**
- * 功能描述:
+ * 实现类:
  *
  * @author yaoyizhou
- * @date 2019/8/12 13:00
+ * @date 2019/8/12 19:51
  * @desc
  */
 public class HelloNettyImpl implements HelloNetty {

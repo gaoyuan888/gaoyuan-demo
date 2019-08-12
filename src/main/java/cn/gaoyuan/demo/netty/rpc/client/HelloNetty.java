@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.netty.demo.client;
+package cn.gaoyuan.demo.netty.rpc.client;
 
 public interface HelloNetty {
     String hello();

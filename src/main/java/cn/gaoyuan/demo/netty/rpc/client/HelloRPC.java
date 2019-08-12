@@ -1,10 +1,10 @@
-package cn.gaoyuan.demo.netty.rpc;
+package cn.gaoyuan.demo.netty.rpc.client;
 
 /**
- * 功能描述:
+ * ��������:
  *
  * @author yaoyizhou
- * @date 2019/8/12 13:01
+ * @date 2019/8/12 19:49
  * @desc
  */
 public interface HelloRPC {

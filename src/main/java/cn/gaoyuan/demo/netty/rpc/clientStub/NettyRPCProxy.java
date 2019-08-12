@@ -1,6 +1,6 @@
-package cn.gaoyuan.demo.netty.demo.clientStub;
+package cn.gaoyuan.demo.netty.rpc.clientStub;
 
-import cn.gaoyuan.demo.netty.demo.serverStub.ClassInfo;
+import cn.gaoyuan.demo.netty.rpc.serverStub.ClassInfo;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;

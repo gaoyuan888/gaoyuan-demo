@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.netty.demo.clientStub;
+package cn.gaoyuan.demo.netty.rpc.clientStub;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

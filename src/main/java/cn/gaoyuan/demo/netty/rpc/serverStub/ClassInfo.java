@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.netty.demo.serverStub;
+package cn.gaoyuan.demo.netty.rpc.serverStub;
 
 import java.io.Serializable;
 

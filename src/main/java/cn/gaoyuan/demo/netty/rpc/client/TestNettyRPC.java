@@ -1,7 +1,7 @@
-package cn.gaoyuan.demo.netty.demo.client;
+package cn.gaoyuan.demo.netty.rpc.client;
 
 
-import cn.gaoyuan.demo.netty.demo.clientStub.NettyRPCProxy;
+import cn.gaoyuan.demo.netty.rpc.clientStub.NettyRPCProxy;
 
 /**
  * 主测试类:
