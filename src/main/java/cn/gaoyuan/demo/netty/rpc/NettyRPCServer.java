@@ -11,6 +11,9 @@ import io.netty.handler.codec.serialization.ObjectEncoder;
 
 /**
  * 功能描述:
+ * 用 Netty 实现的网络服务器，采用 Netty 自带的 ObjectEncoder 和 ObjectDecoder
+ * 作为编解码器（为了降低复杂度，这里并没有使用第三方的编解码器），当然实际开发时也
+ * 可以采用 JSON 或 XML
  *
  * @author yaoyizhou
  * @date 2019/8/12 13:37
