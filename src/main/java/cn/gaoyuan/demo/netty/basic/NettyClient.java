@@ -30,7 +30,7 @@ public class NettyClient {
         //7.启动客户端连接服务器
         ChannelFuture future = b.connect("127.0.0.1", 9999).sync();
         //8.关闭连接,异步非阻塞
-        future.channel().closeFuture().sync();
+//        future.channel().closeFuture().sync();
     }
 
 }

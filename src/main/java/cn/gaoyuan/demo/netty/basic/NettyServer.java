@@ -40,9 +40,9 @@ public class NettyServer {
         ChannelFuture future = serverBootstrap.bind(9999).sync();
         System.out.println("服务器启动成功");
         //11.异步关闭铜带，关闭线程组
-        future.channel().close().sync();
-        bossGroup.shutdownGracefully();
-        workerGroup.shutdownGracefully();
+//        future.channel().close().sync();
+//        bossGroup.shutdownGracefully();
+//        workerGroup.shutdownGracefully();
 
     }
 }
