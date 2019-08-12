@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.netty;
+package cn.gaoyuan.demo.netty.basic;
 
 
 //服务器端业务处理类

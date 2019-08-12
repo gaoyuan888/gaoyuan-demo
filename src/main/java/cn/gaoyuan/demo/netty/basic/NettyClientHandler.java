@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.netty;
+package cn.gaoyuan.demo.netty.basic;
 
 public class NettyClientHandler {
 
