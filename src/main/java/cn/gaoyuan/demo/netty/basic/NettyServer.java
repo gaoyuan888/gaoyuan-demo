@@ -13,7 +13,7 @@ public class NettyServer {
     public static void main(String[] args) throws Exception {
         //1.创建一个线程组，接收客户端连接
         EventLoopGroup bossGroup = new NioEventLoopGroup();
-        //2.创建第二个线程组，处理网络连接
+        //2.创建第二个线程组，处理网络连接IO操作
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         //3.创建服务器端启动助手来配置参数
         ServerBootstrap serverBootstrap = new ServerBootstrap();
