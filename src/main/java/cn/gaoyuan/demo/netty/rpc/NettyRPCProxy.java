@@ -61,7 +61,7 @@ public class NettyRPCProxy {
                     future.channel().closeFuture().sync();
 
                 } catch (Exception e) {
-
+                    e.printStackTrace();
                 } finally {
                     eventLoopGroup.shutdownGracefully();
                 }
