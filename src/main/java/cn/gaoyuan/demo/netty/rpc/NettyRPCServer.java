@@ -62,5 +62,8 @@ public class NettyRPCServer {
         }
     }
 
+    public static void main(String[] args) {
+        new NettyRPCServer(9999).start();
+    }
 
 }
