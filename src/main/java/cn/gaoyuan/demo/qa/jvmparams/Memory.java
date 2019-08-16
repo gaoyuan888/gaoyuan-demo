@@ -18,4 +18,10 @@ public class Memory {
 
     }
 
+    private void foo(Object o) {
+        String str = o.toString();
+        System.out.println(str);
+
+    }
+
 }
