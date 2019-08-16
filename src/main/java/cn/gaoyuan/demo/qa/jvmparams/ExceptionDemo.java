@@ -22,6 +22,7 @@ public class ExceptionDemo {
     /**
      * java.lang.OutOfMemoryError
      * 堆
+     * 直接new 一个大对象
      */
     public static void test2() {
         Byte[] bytes = new Byte[1 * 1024 * 1024 * 1500];
