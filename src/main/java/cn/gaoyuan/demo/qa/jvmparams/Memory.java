@@ -12,6 +12,9 @@ package cn.gaoyuan.demo.qa.jvmparams;
 public class Memory {
 
     public static void main(String[] args) {
+        Byte[] byts = new Byte[1 * 1024 * 1024];
+        byts.toString();
+
         int i = 1;
         Object o = new Object();
         Memory memory = new Memory();
@@ -19,6 +22,7 @@ public class Memory {
     }
 
     private void foo(Object o) {
+        //这里会生成一个字符串对象
         String str = o.toString();
         System.out.println(str);
 
