@@ -1,6 +1,8 @@
 package cn.gaoyuan.demo.qa.jvmparams;
 
+import java.util.Calendar;
 import java.util.Stack;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 功能描述:
@@ -12,6 +14,15 @@ import java.util.Stack;
 public class RunTimeDemo {
 
     public static void main(String[] args) {
+        ConcurrentHashMap map=new ConcurrentHashMap();
+
+
+
+        Calendar c = Calendar.getInstance();
+// 当前日期是本月第几周
+        int weeks = c.get(Calendar.WEEK_OF_MONTH);
+
+        System.out.println(weeks);
 //        Long ss = 1254L;
 //        System.out.println(ss.intValue());
 //        System.out.println(Runtime.getRuntime().maxMemory() / 1024 / 1024);
