@@ -1,6 +1,8 @@
 package cn.gaoyuan.demo.test;
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 功能描述:
@@ -13,6 +15,16 @@ public class Test {
 
 
     public static void main(String[] args) {
+        Map<String,String> map=new HashMap<>();
+        map.put("a","a");
+        System.out.println(map);
+        String s="aaaa";
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            System.out.println(chars[i]);
+        }
+
+
         testTransient();
     }
     public static void testTransient(){
