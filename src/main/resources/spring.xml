@@ -3,12 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="dao" class="cn.gaoyuan.demo.springdemo.GDaoImpl"></bean>
-    <bean id="service" class="cn.gaoyuan.demo.springdemo.GServiceImpl">
-        <!--通过set方法注入-->
-        <property name="gDao" ref="dao"></property>
-        <!--通过构造方法注入-->
-        <!--<constructor-arg ref="dao"></constructor-arg>-->
+    <!--<bean id="dao" class="cn.gaoyuan.demo.springdemo.GDaoImpl"></bean>-->
+    <!--<bean id="service" class="cn.gaoyuan.demo.springdemo.GServiceImpl">-->
+    <!--&lt;!&ndash;通过set方法注入&ndash;&gt;-->
+    <!--<property name="gDao" ref="dao"></property>-->
+    <!--&lt;!&ndash;通过构造方法注入&ndash;&gt;-->
+    <!--&lt;!&ndash;<constructor-arg ref="dao"></constructor-arg>&ndash;&gt;-->
+    <!--</bean>-->
+
+    <bean id="beanDemo" class="cn.gaoyuan.demo.springdemo.demo1.BeanDemo">
+
     </bean>
 
 </beans>
