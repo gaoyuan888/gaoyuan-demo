@@ -8,7 +8,14 @@ import org.junit.Test;
  * Unit test for simple App.
  */
 public class AppTest implements App11
+
+
 {
+
+    public static void main(String[] args) {
+        System.out.println(Float.MAX_VALUE);
+    }
+
     /**
      * Rigorous Test :-)
      */
