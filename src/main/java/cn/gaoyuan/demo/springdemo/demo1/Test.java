@@ -14,7 +14,7 @@ public class Test {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("classpath:spring.xml");
-        GService service = (GService) context.getBean("service");
-        service.service();
+        BeanDemo service = (BeanDemo) context.getBean("beanDemo");
+//        service.service();
     }
 }

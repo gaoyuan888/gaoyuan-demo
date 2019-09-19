@@ -13,7 +13,10 @@ public class AppTest implements App11
 {
 
     public static void main(String[] args) {
-        System.out.println(Float.MAX_VALUE);
+        Integer s=null;
+        System.out.println(s==0);
+
+//        System.out.println(Float.MAX_VALUE);
     }
 
     /**
