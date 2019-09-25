@@ -1,4 +1,4 @@
-package cn.gaoyuan.demo.algorithm.tree.jzoffer;
+package cn.gaoyuan.demo.algorithm.jzoffer;
 
 /**
  * 功能描述: 剑指offer36.二叉搜索树与双向链表
@@ -11,18 +11,19 @@ package cn.gaoyuan.demo.algorithm.tree.jzoffer;
 class TreeNode {
     TreeNode left;
     TreeNode right;
-    Integer value;
+    int value;
 
-    public TreeNode(Integer value) {
+    public TreeNode(int value) {
         this.value = value;
     }
-
 }
+
+
 
 public class Jzoffer36 {
 
     //   定义pre成员
-    static TreeNode pre=null;
+    static TreeNode pre = null;
 
     public static TreeNode solution(TreeNode curr) {
         if (curr == null) {
@@ -41,7 +42,6 @@ public class Jzoffer36 {
         }
         return curr;
     }
-
 
 
     public static void main(String[] args) {
@@ -71,7 +71,6 @@ public class Jzoffer36 {
     }
 
 
-
     public static TreeNode solution1(TreeNode root) {
         TreeNode solution = solution(root);
         while (solution.left != null) {
@@ -80,7 +79,6 @@ public class Jzoffer36 {
         return solution;
 
     }
-
 
 
 }
