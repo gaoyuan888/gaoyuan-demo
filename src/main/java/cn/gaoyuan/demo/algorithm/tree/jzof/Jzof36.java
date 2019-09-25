@@ -19,7 +19,7 @@ class TreeNode {
 
 }
 
-public class Test {
+public class Jzof36 {
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(4);
