@@ -1,7 +1,7 @@
 package cn.gaoyuan.demo.algorithm.tree.jzof;
 
 /**
- * 功能描述:
+ * 功能描述: 剑指offer36.二叉搜索树与双向链表
  *
  * @author yaoyizhou
  * @date 2019/9/25 10:27
