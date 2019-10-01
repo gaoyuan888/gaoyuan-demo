@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!--<bean id="dao" class="cn.gaoyuan.demo.springdemo.GDaoImpl"></bean>-->
-    <!--<bean id="service" class="cn.gaoyuan.demo.springdemo.GServiceImpl">-->
-    <!--&lt;!&ndash;通过set方法注入&ndash;&gt;-->
-    <!--<property name="gDao" ref="dao"></property>-->
-    <!--&lt;!&ndash;通过构造方法注入&ndash;&gt;-->
-    <!--&lt;!&ndash;<constructor-arg ref="dao"></constructor-arg>&ndash;&gt;-->
-    <!--</bean>-->
-
-    <bean id="beanDemo" class="cn.gaoyuan.demo.springdemo.demo1.BeanDemo">
-
+    <!--宝扫描-->
+    <bean id="person" class="cn.gaoyuan.demo.springdemo.annotation.bean.Person">
+        <property name="age" value="18"></property>
+        <property name="name" value="zhangsan"></property>
     </bean>
 
 </beans>
