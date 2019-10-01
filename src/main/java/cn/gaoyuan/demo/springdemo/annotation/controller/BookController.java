@@ -1,5 +1,7 @@
 package cn.gaoyuan.demo.springdemo.annotation.controller;
 
+import cn.gaoyuan.demo.springdemo.annotation.service.BookService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -11,4 +13,9 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 public class BookController {
+
+    @Autowired
+    private BookService bookService;
+
+
 }
