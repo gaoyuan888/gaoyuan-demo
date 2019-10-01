@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class BookDao {
 
-    private String lable;
+    private String lable = "1";
 
     public String getLable() {
         return lable;
