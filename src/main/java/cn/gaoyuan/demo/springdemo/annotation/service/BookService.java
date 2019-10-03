@@ -16,18 +16,19 @@ import org.springframework.stereotype.Service;
 @Service
 public class BookService {
 
-    @Qualifier("bookDao")
-    @Autowired(required = false)
-    private BookDao bookDao;
+    //    这里按照名称指定装配的bean，bean的注入是从MainConfig和@Repository中注入的（参考bean的注入方式）
+//    @Qualifier("bookDao2")
+    @Autowired
+    private BookDao bookDao2;
 
     public void print() {
-        System.out.println(bookDao);
+        System.out.println(bookDao2);
     }
 
     @Override
     public String toString() {
         return "BookService{" +
-                "bookDao=" + bookDao +
+                "bookDao=" + bookDao2 +
                 '}';
     }
 }

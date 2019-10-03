@@ -9,6 +9,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 /**
  * 功能描述:
  *
+ *
+ *
  * @author yaoyizhou
  * @date 2019/10/1 22:03
  * @desc
@@ -23,7 +25,7 @@ public class IOCTest_Autowired {
 
         System.out.println(bean);
 
-        BookDao bean1 = context.getBean(BookDao.class);
+        BookDao bean1 = (BookDao) context.getBean("bookDao");
         System.out.println(bean1);
 
 
