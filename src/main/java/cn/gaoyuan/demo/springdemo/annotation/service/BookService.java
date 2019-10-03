@@ -2,8 +2,6 @@ package cn.gaoyuan.demo.springdemo.annotation.service;
 
 import cn.gaoyuan.demo.springdemo.annotation.dao.BookDao;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Service;
 
 /**
