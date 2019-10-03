@@ -4,6 +4,8 @@ import cn.gaoyuan.demo.springdemo.annotation.dao.BookDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 /**
  * 功能描述:
  *
@@ -16,7 +18,8 @@ public class BookService {
 
     //    这里按照名称指定装配的bean，bean的注入是从MainConfig和@Repository中注入的（参考bean的注入方式）
 //    @Qualifier("bookDao2")
-    @Autowired
+//    @Autowired
+    @Resource
     private BookDao bookDao2;
 
     public void print() {
