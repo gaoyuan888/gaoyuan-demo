@@ -19,6 +19,7 @@ public class IOCTest_Autowired {
 
     @Test
     public void test() {
+
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MainConfigOfAutowired.class);
 
         BookService bean = context.getBean(BookService.class);
