@@ -1,5 +1,7 @@
 package cn.gaoyuan.demo.springdemo.annotation.bean;
 
+import org.springframework.stereotype.Component;
+
 /**
  * 功能描述:
  *
@@ -7,6 +9,7 @@ package cn.gaoyuan.demo.springdemo.annotation.bean;
  * @date 2019/10/1 14:42
  * @desc
  */
+@Component
 public class Car {
 
     public Car() {

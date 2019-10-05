@@ -1,10 +1,11 @@
 package cn.gaoyuan.demo.springdemo.annotation.config;
 
+import cn.gaoyuan.demo.springdemo.annotation.bean.Car;
+import cn.gaoyuan.demo.springdemo.annotation.bean.Color;
 import cn.gaoyuan.demo.springdemo.annotation.dao.BookDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 
 /**
  * 功能描述:
@@ -14,11 +15,11 @@ import org.springframework.context.annotation.Primary;
  * @desc
  */
 @Configuration
-@ComponentScan({"cn.gaoyuan.demo.springdemo.annotation.service", "cn.gaoyuan.demo.springdemo.annotation.controller", "cn.gaoyuan.demo.springdemo.annotation.dao"})
+@ComponentScan({"cn.gaoyuan.demo.springdemo.annotation.bean", "cn.gaoyuan.demo.springdemo.annotation.service", "cn.gaoyuan.demo.springdemo.annotation.controller", "cn.gaoyuan.demo.springdemo.annotation.dao"})
 public class MainConfigOfAutowired {
 
 
-//    @Primary
+    //    @Primary
     @Bean("bookDao2")
     public BookDao bookDao() {
         BookDao bookDao = new BookDao();
@@ -26,5 +27,13 @@ public class MainConfigOfAutowired {
         return bookDao;
     }
 
+
+    @Bean
+    public Color color(Car car) {
+
+        Color color = new Color();
+        color.setCar(car);
+        return color;
+    }
 }
 
