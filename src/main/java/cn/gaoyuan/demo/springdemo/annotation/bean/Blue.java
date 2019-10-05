@@ -8,4 +8,16 @@ package cn.gaoyuan.demo.springdemo.annotation.bean;
  * @desc
  */
 public class Blue {
+
+    public Blue() {
+        System.out.println("blue  constructor");
+    }
+
+    public void init() {
+        System.out.println("blue init");
+    }
+
+    public void destory() {
+        System.out.println("blue destory");
+    }
 }
