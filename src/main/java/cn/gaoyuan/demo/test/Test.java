@@ -1,8 +1,10 @@
 package cn.gaoyuan.demo.test;
 
+import org.apache.commons.lang.StringUtils;
+
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 功能描述:
@@ -15,17 +17,29 @@ public class Test {
 
 
     public static void main(String[] args) {
-        Map<String,String> map=new HashMap<>();
-        map.put("a","a");
-        System.out.println(map);
-        String s="aaaa";
-        char[] chars = s.toCharArray();
-        for (int i = 0; i < chars.length; i++) {
-            System.out.println(chars[i]);
-        }
+        StringBuffer sb=new StringBuffer();
+        boolean blank = StringUtils.isBlank(sb.toString());
+        System.out.println(blank);
 
 
-        testTransient();
+        List<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("d");
+        list.add("e");
+        list.add("f");
+        list.add("g");
+        list.add("h");
+        list.add("i");
+        int size = list.size() / 4;
+
+        List<String> list1 = list.subList(0, size);
+        List<String> list2 = list.subList(size, 2*size);
+        List<String> list3 = list.subList(2*size, 3*size);
+        List<String> list4 = list.subList(3*size, list.size());
+        System.out.println(list4);
+
     }
     public static void testTransient(){
         String name1="常规属性",name2="transient修饰的属性";
