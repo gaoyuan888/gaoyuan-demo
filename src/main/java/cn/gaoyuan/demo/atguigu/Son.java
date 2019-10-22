@@ -16,7 +16,7 @@ public class Son extends Father {
     }
 
     Son() {
-        super();//写或不写都存在
+//        super();//写或不写都存在
         System.out.println("(7)");
     }
 
@@ -24,12 +24,13 @@ public class Son extends Father {
         System.out.println("(8)");
     }
 
-    private int test() {
+    @Override
+    public int test() {
         System.out.println("(9)");
         return 1;
     }
 
-    private static int method() {
+    public static int method() {
         System.out.println("(10)");
         return 1;
     }

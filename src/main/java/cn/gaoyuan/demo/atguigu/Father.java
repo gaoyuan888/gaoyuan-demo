@@ -10,26 +10,26 @@ package cn.gaoyuan.demo.atguigu;
 public class Father {
 
     private int i = test();
-    static {
-        System.out.println("(1)");
-    }
+
     private static int j = method();
 
 
     Father() {
         System.out.println("(2)");
     }
-
+    static {
+        System.out.println("(1)");
+    }
     {
         System.out.println("(3)");
     }
 
-    private int test() {
+    public int test() {
         System.out.println("(4)");
         return 1;
     }
 
-    private static int method() {
+    public static int method() {
         System.out.println("(5)");
         return 1;
     }
