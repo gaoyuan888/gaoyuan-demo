@@ -10,13 +10,11 @@ package cn.gaoyuan.demo.atguigu;
 public class Father {
 
     private int i = test();
-
-
-    private static int j = method();
-
     static {
         System.out.println("(1)");
     }
+    private static int j = method();
+
 
     Father() {
         System.out.println("(2)");
