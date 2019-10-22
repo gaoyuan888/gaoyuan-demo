@@ -17,7 +17,10 @@ public class Test2 {
 
         int i = 0;
         try {
+            int i1 = 1 / 0;
             return i += 10;
+        } catch (Exception e) {
+            throw e;
         } finally {
             i += 10;
             return i;
