@@ -16,6 +16,7 @@ public class Son extends Father {
     }
 
     Son() {
+        super();//写或不写都存在
         System.out.println("(7)");
     }
 
