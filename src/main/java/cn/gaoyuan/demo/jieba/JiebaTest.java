@@ -6,6 +6,7 @@ import com.huaban.analysis.jieba.WordDictionary;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.Executors;
 
 /**
  * 功能描述:
@@ -15,6 +16,9 @@ import java.util.Map;
  * @desc
  */
 public class JiebaTest {
+
+
+
 
     public static void main(String[] args) {
         String text = "加载自定义词库的信息，开始做自定义词库的分词" ;
