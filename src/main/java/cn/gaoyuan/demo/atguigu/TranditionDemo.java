@@ -13,7 +13,7 @@ class ShareData {
         lock.lock();
         try {
             //判断
-            while (number != 0) {
+            while (number >= 5) {
                 //等待，不生产
                 condition.await();
             }
@@ -64,7 +64,7 @@ public class TranditionDemo {
     public static void main(String[] args) {
         ShareData shareData = new ShareData();
         new Thread(() -> {
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 10000; i++) {
                 try {
                     shareData.increment();
                 } catch (Exception e) {
@@ -73,7 +73,7 @@ public class TranditionDemo {
             }
         }, "AA").start();
         new Thread(() -> {
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 10000; i++) {
                 try {
                     shareData.decrement();
                 } catch (Exception e) {
@@ -81,5 +81,24 @@ public class TranditionDemo {
                 }
             }
         }, "BB").start();
+
+        new Thread(() -> {
+            for (int i = 0; i < 10000; i++) {
+                try {
+                    shareData.increment();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }, "cc").start();
+        new Thread(() -> {
+            for (int i = 0; i < 10000; i++) {
+                try {
+                    shareData.decrement();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }, "dd").start();
     }
 }
