@@ -1,6 +1,8 @@
 package cn.gaoyuan.demo.atguigu;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 功能描述:
@@ -12,6 +14,12 @@ import java.io.*;
 public class Test1 {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
+        List<String> ss=null;
+        for (String s : ss) {
+
+        }
+
+
         ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream(new File("d://a.object")));
         oos.writeObject(new MyClass(1,2));
 

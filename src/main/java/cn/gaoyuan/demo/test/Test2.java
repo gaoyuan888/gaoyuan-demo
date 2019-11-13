@@ -1,5 +1,7 @@
 package cn.gaoyuan.demo.test;
 
+import java.io.Serializable;
+
 /**
  * 功能描述:
  *
@@ -7,23 +9,28 @@ package cn.gaoyuan.demo.test;
  * @date 2019/10/17 12:56
  * @desc
  */
-public class Test2 {
+public class Test2 implements Serializable {
     public static void main(String[] args) {
-        int query = query();
+        Integer query = query();
         System.out.println(query);
     }
 
-    private static int query() {
-
-        int i = 0;
+    private static Integer query() {
+//        Mydata mydata = new Mydata();
+        Integer i = 0;
         try {
-            int i1 = 1 / 0;
-            return i += 10;
+//            int i1 = 1 / 0;
+            i += 10;
+            return i;
         } catch (Exception e) {
             throw e;
         } finally {
             i += 10;
-            return i;
+//            return i[0];
         }
     }
+}
+
+class Mydata {
+    int a = 0;
 }
