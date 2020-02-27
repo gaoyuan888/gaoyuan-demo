@@ -5,10 +5,8 @@ import cn.gaoyuan.demo.springdemo.annotation.bean.ColorFactoryBean;
 import cn.gaoyuan.demo.springdemo.annotation.bean.Person;
 import cn.gaoyuan.demo.springdemo.annotation.bean.Red;
 import cn.gaoyuan.demo.springdemo.annotation.condition.LinuxCondition;
-import cn.gaoyuan.demo.springdemo.annotation.condition.MyImportBeanDefinitionRegistrar;
 import cn.gaoyuan.demo.springdemo.annotation.condition.MyImportSelector;
 import cn.gaoyuan.demo.springdemo.annotation.condition.WindowCondition;
-import org.springframework.context.annotation.*;
 
 /**
  * 功能描述:
