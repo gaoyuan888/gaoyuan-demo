@@ -7,6 +7,7 @@ import cn.gaoyuan.demo.springdemo.annotation.bean.Red;
 import cn.gaoyuan.demo.springdemo.annotation.condition.LinuxCondition;
 import cn.gaoyuan.demo.springdemo.annotation.condition.MyImportSelector;
 import cn.gaoyuan.demo.springdemo.annotation.condition.WindowCondition;
+import org.springframework.context.annotation.*;
 
 /**
  * 功能描述:
@@ -18,7 +19,7 @@ import cn.gaoyuan.demo.springdemo.annotation.condition.WindowCondition;
 @Configuration
 //满足当前条件，这个类中配置的所有bean注册情况
 @Conditional({WindowCondition.class})
-@Import({Color.class, Red.class, MyImportSelector.class, MyImportBeanDefinitionRegistrar.class})
+@Import({Color.class, Red.class, MyImportSelector.class})
 public class MainConfig2 {
 
     @Bean
